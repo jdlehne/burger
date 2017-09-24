@@ -24,6 +24,7 @@
   "homepage": "https://github.com/jdlehne/burger#readme",
   "dependencies": {
     "body": "^5.1.0",
+    "body-parser": "^1.18.1",
     "express": "^4.15.4",
     "express-handlebars": "^3.0.0",
     "method-override": "^2.3.9",

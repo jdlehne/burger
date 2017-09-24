@@ -1,0 +1,32 @@
+<h1>Eat Burgerz</h1>
+
+<ul>
+  {{#each burger_name}}
+  <li>
+    <p>
+      {{this.id}}. {{this.burger_name}}
+
+      <form action="/{{this.id}}?_method=DELETE" method="POST">
+        <button type="submit">Devour</button>
+      </form>
+    </p>
+  </li>
+  {{/each}}
+</ul>
+
+<h2>Add Burger</h2>
+<form method="POST" action="/" class="button-size">
+  <textarea type="text" name="burger_name"></textarea>
+  <button type="submit">Add This Burger!</button>
+</form>
+
+<h2>Change Burger</h2>
+<form action="/?_method=PUT" method="POST" class="button-size">
+  <select name="id">
+		{{#each burger_name}}<!--needs to reference the object.id from the db-->
+			<option value="{{this.id}}">{{this.burger_name}}</option>
+		{{/each}}
+	</select>
+  <textarea type="text" name="burger_name" placeholder="burger_name"></textarea>
+  <button type="submit">Modify existing Burger</button>
+</form>
