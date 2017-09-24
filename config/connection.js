@@ -13,7 +13,7 @@ var mysql = require("mysql");
   		console.error('error connecting: ' + err.stack);
   		return;
   	}
-  	console.log('Connect to MySQL database on thread ' + connection.threadId);
+  	console.log('Connected to MySQL database on thread ' + connection.threadId);
   });
 
   module.exports = connection;
