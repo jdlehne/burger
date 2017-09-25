@@ -2,30 +2,36 @@
   <header>Eat Burgerz</header>
 
   <div class="row">
-    <div class="col-md-4" id="eatBurgs">
+    <div class="col-md-3" id="eatBurgs">
+      <h2>Burgz Available:</h2>
+      <hr>
       <ul style="list-style: none;">
         {{#each burger_name}}
-        {{#unless this.devoured}}
-          <div>
-            <li>
-              <p id="listBurg">
-                {{this.id}}. {{this.burger_name}}
-                <form action="/{{this.id}}?_method=PUT" method="POST">
-                  <button id="eatBtn" type="submit">Devour</button>
-                </form>
-              </p>
-            </li>
-          </div>
+          {{#unless this.devoured}}
+            <div>
+              <li>
+                <p id="listBurg">
+                  {{this.id}}. {{this.burger_name}}
+                  <form action="/{{this.id}}?_method=PUT" method="POST">
+                    <button id="eatBtn" type="submit">Devour</button>
+                  </form>
+                </p>
+              </li>
+            </div>
           {{/unless}}
         {{/each}}
       </ul>
     </div>
 
-    <div class="col-md-4">
-      <img src="/assets/img/8bitburger.jpg">
+    <div class="col-md-6">
+      <div id="imgDiv">
+        <img src="/assets/img/8bitburger.jpg">
+      </div>
     </div>
 
-    <div class="col-md-4" id="ateBurg">
+    <div class="col-md-3" id="ateBurg">
+      <h2>Burgz Eaten:</h2>
+      <hr>
       <ul style="list-style: none;">
         {{#each burger_name}}
           {{#if this.devoured}}
@@ -46,8 +52,10 @@
   <div class="row">
     <div class="col-md-12" id="addBurg">
       <h2>Add Burger</h2>
+      <hr>
       <form method="POST" action="/" class="button-size">
         <textarea type="text" name="burger_name"></textarea>
+        <br>
         <button type="submit">Add This Burger!</button>
       </form>
     </div>
