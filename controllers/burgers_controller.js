@@ -24,7 +24,7 @@ var connection = require("../config/connection.js");
     });
   });
 
-  routerApp.delete("/:id", function(req, res) {
+  /*routerApp.delete("/:id", function(req, res) {
     connection.query("DELETE FROM burgers WHERE id = ?", [req.params.id], function(err, result) {
       if (err) {
         throw err;
@@ -32,11 +32,8 @@ var connection = require("../config/connection.js");
 
       res.redirect("/");
     });
-  });
+  });*/
 
-
-
-  //UPDATE burgers SET devoured = true WHERE id = ?
 
   routerApp.put("/:id", function(req, res) {
     connection.query("UPDATE burgers SET devoured = true WHERE id = ?", [req.params.id], function(err, result) {

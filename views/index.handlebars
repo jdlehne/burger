@@ -5,6 +5,7 @@
     <div class="col-md-4" id="eatBurgs">
       <ul style="list-style: none;">
         {{#each burger_name}}
+        {{#unless this.devoured}}
           <div>
             <li>
               <p id="listBurg">
@@ -15,6 +16,7 @@
               </p>
             </li>
           </div>
+          {{/unless}}
         {{/each}}
       </ul>
     </div>
