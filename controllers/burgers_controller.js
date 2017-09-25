@@ -34,8 +34,12 @@ var connection = require("../config/connection.js");
     });
   });
 
-  routerApp.put("/", function(req, res) {
-    connection.query("UPDATE burgers SET burger_name = ? WHERE id = ?", [req.body.burger_name, req.body.id], function(err, result) {
+
+
+  //UPDATE burgers SET devoured = true WHERE id = ?
+
+  routerApp.put("/:id", function(req, res) {
+    connection.query("UPDATE burgers SET devoured = true WHERE id = ?", [req.params.id], function(err, result) {
       if (err) {
         throw err;
       }
