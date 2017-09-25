@@ -4,6 +4,7 @@
   "description": "app using node, express, mySQL and handlebars",
   "main": "server.js",
   "scripts": {
+    "start": "node server.js",
     "test": "node server.js"
   },
   "repository": {
