@@ -12,6 +12,7 @@
               <li>
                 <p id="listBurg">
                   {{this.id}}. {{this.burger_name}}
+                  <br>
                   <form action="/{{this.id}}?_method=PUT" method="POST">
                     <button id="eatBtn" type="submit">Devour</button>
                   </form>
@@ -58,6 +59,9 @@
         <br>
         <button type="submit">Add This Burger!</button>
       </form>
+      <br>
+      <p id="icons"><span class="glyphicon glyphicon-play" aria-hidden="true" id="play"></span>
+      <span class="glyphicon glyphicon-pause" aria-hidden="true" id="pause"></span></p>
     </div>
   </div>
 
