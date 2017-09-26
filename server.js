@@ -6,7 +6,7 @@ var routes = require("./controllers/burgers_controller.js");
 
 
 var app = express();
-var port = process.env.PORT || 5000;
+var PORT= process.env.PORT || 5000;
 
 app.use(express.static(process.cwd() + '/public'));
 
@@ -28,6 +28,6 @@ app.set("view engine", "handlebars");
 var routes = require("./controllers/burgers_controller.js");
 app.use("/", routes);
 
-app.listen(process.env.port || 5000, function() {
-  console.log("I AM ALIVE!!!! @port " + port);
+app.listen(process.env.PORT|| 5000, function() {
+  console.log("I AM ALIVE!!!! @PORT" + port);
 });
