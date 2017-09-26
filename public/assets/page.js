@@ -1,4 +1,4 @@
-$(document).ready(function() {
+/*$(document).ready(function() {
 
   var audioElement = document.createElement('audio');
   audioElement.setAttribute('src', "assets/theme.mp3");
@@ -18,4 +18,4 @@ $(document).ready(function() {
         audioElement.pause();
     });
 
-});
+});*/
