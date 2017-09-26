@@ -29,5 +29,5 @@ var routes = require("./controllers/burgers_controller.js");
 app.use("/", routes);
 
 app.listen(process.env.PORT|| 5000, function() {
-  console.log("I AM ALIVE!!!! @PORT" + port);
+  console.log("I AM ALIVE!!!! @PORT" + PORT);
 });
